@@ -1,0 +1,10 @@
+#this is the file with input parameters to calculate Ids(Uds,Ugs)
+Uds: [-0.3, 0, 100]  #[Uds_start, Uds_end, num. of points] [V] voltage
+Ugs: [-0.7, 0.0, 8] #[Uds_start, Uds_end, num. of points] [V] voltage
+E11: 0.879 #band gap [eV]           0.879 eV for (9,8) CNT
+E22: 1.533 #"second" band gap [eV]  1.533 eV for (9,8) CNT
+delta: 0.3 #this is a doping parameter: EF(CNT). If CNT is unpoded, delta = 0. p-type doping (air, Pd, etc): delta>0. n-type (Sc,Ir) -- delta<0.
+T: 300 #[K]. zero temperature is also possible
+Tol: 1E-15 #Tolerance for integration, absolute. It should be 3 or more order higher compared to minimum current you want to detect
+alpha_Ugs: 0.2 #gate efficiency. Can be estimated as SS_exper/SS_theor. SS_theor ~ 60 mV/dec
+alpha_Uds: 0.1 #drain-source voltage efficiency: % of applied Vds droping on a tube and + R0,c
